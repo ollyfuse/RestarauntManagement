@@ -166,8 +166,8 @@ h2 a {
 <td>NUmber ID</td>
 <td>Email</td>
 <td>Phone Number</td>
-<td>Update</td>
-<td>Delete Employee</td>
+<!-- <td>Update</td>
+<td>Delete Employee</td> -->
 </tr>
 <%
 try{
@@ -186,8 +186,8 @@ while(resultSet.next()){
 <td><%=resultSet.getInt("idnumber") %></td>
 <td><%=resultSet.getString("email") %></td>
 <td><%=resultSet.getString("phone") %></td>
-<td><a href="Edit.jsp?id=<%=resultSet.getString("c_id") %>">Edit</a></td>
-<td><a href="Delete?id=<%=resultSet.getString("c_id") %>">Delete</a></td>
+<%-- <td><a href="Edit.jsp?id=<%=resultSet.getString("c_id") %>">Edit</a></td>
+<td><a href="Delete?id=<%=resultSet.getString("c_id") %>">Delete</a></td> --%>
 </tr>
 <%
 }
@@ -197,75 +197,3 @@ e.printStackTrace();
 }
 %>
 
-
-
-<%-- 
-
-
-    <%@page import="java.sql.DriverManager"%>
-    <%@page import="java.sql.ResultSet"%>
-    <%@page import="java.sql.Statement"%>
-    <%@page import="java.sql.Connection"%>
-    <%
-    String id = request.getParameter("userid"); 
-    
-  /*   String driver = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:8081/";
-    String database = "msystem";
-    String userid = "root";
-    String password = ""; */
-     String dburl="jdbc:mysql://localhost:3306/msystem";
-	 String userid="root";
-	 String password="";
-	 String driver="com.mysql.cj.jdbc.Driver";
-    try {
-    Class.forName(driver);
-    } catch (ClassNotFoundException e) {
-    e.printStackTrace();
-    }
-    Connection connection = null;
-    Statement statement = null;
-    ResultSet resultSet = null;
-    %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<h1>Retrieve data from database in Chiefs</h1>
-
-<table border="1">
-<tr>
-<td>Chief Id</td>
-<td>Chief Name</td>
-<td>Gender</td>
-<td>Year of Experience</td>
-<td>Age</td>
-</tr>
-<%
-try{
-connection = DriverManager.getConnection(dburl, userid, password);
-statement=connection.createStatement();
-String sql ="SELECT * FROM `chiefs`";
-resultSet = statement.executeQuery(sql);
-while(resultSet.next()){
-%>
-<tr>
-<td><%=resultSet.getString("f_id") %></td>
-<td><%=resultSet.getString("f_name") %></td>
-<td><%=resultSet.getString("gender") %></td>
-<td><%=resultSet.getString("year_expr") %></td>
-<td><%=resultSet.getInt("age") %></td>
-</tr>
-<%
-}
-connection.close();
-} catch (Exception e) {
-e.printStackTrace();
-}
-%>
-</table>
-</body>
-</htm --%>l>

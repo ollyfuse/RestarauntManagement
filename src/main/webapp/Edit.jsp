@@ -182,7 +182,7 @@ form .user-details .input-box{
       <form action="Update" method="post" enctype="multipart/form-data">
         <div class="user-details">
           <div class="input-box">
-            <input type="hidden" name="idc" placeholder="Enter your name" required value="<%=id %>">
+            <input type="hidden" name="idc" placeholder="Enter your name" required value="<%= id %>">
             <span class="details">Full Name</span>
             <input type="text" name="c_name" placeholder="Enter your name" required value="<%= resultSet.getString("c_name") %>">
           </div>

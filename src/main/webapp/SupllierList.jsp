@@ -159,6 +159,8 @@ h2 a {
 <td>Supplier Name</td>
 <td>Start Year</td>
 <td>End Year</td>
+<!-- <td>Update</td>
+<td>Delete</td> -->
 </tr>
 	</thead>
 	<tbody>
@@ -186,71 +188,3 @@ e.printStackTrace();
 
 
 
-
-
-<%-- 
-    <%@page import="java.sql.DriverManager"%>
-    <%@page import="java.sql.ResultSet"%>
-    <%@page import="java.sql.Statement"%>
-    <%@page import="java.sql.Connection"%>
-    <%
-    String id = request.getParameter("userid"); 
-    
-  /*   String driver = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:8081/";
-    String database = "msystem";
-    String userid = "root";
-    String password = ""; */
-     String dburl="jdbc:mysql://localhost:3306/msystem";
-	 String userid="root";
-	 String password="";
-	 String driver="com.mysql.cj.jdbc.Driver";
-    try {
-    Class.forName(driver);
-    } catch (ClassNotFoundException e) {
-    e.printStackTrace();
-    }
-    Connection connection = null;
-    Statement statement = null;
-    ResultSet resultSet = null;
-    %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<h1>Retrieve data from database in Chiefs</h1>
-
-<table border="1">
-<tr>
-<td>Supplier Id</td>
-<td>Supplier Name</td>
-<td>Start Year</td>
-<td>End Year</td>
-</tr>
-<%
-try{
-connection = DriverManager.getConnection(dburl, userid, password);
-statement=connection.createStatement();
-String sql ="SELECT * FROM `supplier`";
-resultSet = statement.executeQuery(sql);
-while(resultSet.next()){
-%>
-<tr>
-<td><%=resultSet.getString("s_id") %></td>
-<td><%=resultSet.getString("ca_name") %></td>
-<td><%=resultSet.getString("start_year") %></td>
-<td><%=resultSet.getString("end_year") %></td>
-</tr>
-<%
-}
-connection.close();
-} catch (Exception e) {
-e.printStackTrace();
-}
-%>
-</table>
-</body>
-</html> --%>

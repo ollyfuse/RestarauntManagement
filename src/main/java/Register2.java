@@ -46,7 +46,7 @@ Chief chf = new Chief (f_name,gender,year_expr,age,phone,email,idnumber);
 		Dbconnection dbcon=new Dbconnection();
 		String Result=dbcon.insert(chf);
 		
-		request.setAttribute("errorMessage", "Chief Registed successfully");
+		request.setAttribute("errorMessage", "New Employee Registered");
 		request.getRequestDispatcher("Chiefs.jsp").forward(request, response);
 		
 		response.getWriter().print(Result);

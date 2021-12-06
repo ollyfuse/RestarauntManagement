@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Welcome</title>
 <style type="text/css">
 ul {
   padding: 0;
@@ -39,7 +39,7 @@ body {
   height: 100vh;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(135deg, #8254EA 0%, #E86DEC 100%);
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
   -webkit-font-smoothing: antialiased;
   font-size: 12px;
 }
@@ -363,7 +363,17 @@ a:hover {
 a:active {
   background-color: hotpink;
 } 
+input{
+  background: #15a4fa;
+  border: none;
+  color: white;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 
+}
 </style>
 
 </head>
@@ -426,17 +436,6 @@ a:active {
       </div>
     </label>
     <input id='Users' name='radio' type='radio'>
-    <label for='Users'>
-      <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/del.png'>
-      <span>Stock</span>
-      <div class='lil_arrow'></div>
-      <div class='bar'></div>
-      <div class='swanky_wrapper__content'>
-        <ul>
-          <li><a href="#">Supplied</a></li>
-        </ul>
-      </div>
-    </label>
     <input id='Settings' radio='radio' type='radio'>
     <label for='Settings'>
       <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/set.png'>
@@ -463,7 +462,7 @@ a:active {
 </div>
 <!-- / My Footer -->
 <div class='love'>
-  <p>Copy Right &copy; RURA</a></p>
+  <p>Copy Right &copy; Group6</a></p>
 </div>
 </body>
 </html>
