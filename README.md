@@ -1,6 +1,6 @@
 # RestarauntManagement
 
-# Members of Gropp 6
+# Members of Group 6
  NAMES          &                      REG NUMBER:
 
 1. BIGIRIMANA Olivier                 220006239
